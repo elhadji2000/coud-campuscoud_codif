@@ -176,27 +176,51 @@ if (isset($_GET["numCarte"])) {
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Numéro Étudiant</label>
-                        <input type="text" name="num_etu" required class="form-control" placeholder="Ex: 2023123456">
+                        <input type="text" name="num_etu" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control" placeholder="Ex: 2023123456">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Prénom</label>
-                        <input type="text" name="prenoms" required class="form-control">
+                        <input type="text" style="background-color: rgba(161, 187, 228, 0.1);" name="prenoms" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Nom</label>
-                        <input type="text" name="nom" required class="form-control">
+                        <input type="text" name="nom" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Téléphone</label>
-                        <input type="text" name="telephone" required class="form-control">
+                        <input type="text" name="telephone" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label">Département</label>
-                        <input type="text" name="departement" required class="form-control">
+                        <label class="form-label">Lieu de Naissance</label>
+                        <input type="text" name="lieuNaissance" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Date de Naissance</label>
-                        <input type="date" name="dateNaissance" required class="form-control">
+                        <input type="date" name="dateNaissance" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Etablissement</label>
+                        <input type="text" name="etablissement" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Département</label>
+                        <input type="text" name="departement" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Niveau de Formation</label>
+                        <input type="text" name="niveauFormation" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Moyenne</label>
+                        <input type="text" name="moyenne" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Numero Identitè</label>
+                        <input type="text" name="numIdentite" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Sexe</label>
+                        <input type="text" name="sexe" style="background-color: rgba(161, 187, 228, 0.1);" required class="form-control">
                     </div>
                 </div>
                 <div class="text-center mt-3">
