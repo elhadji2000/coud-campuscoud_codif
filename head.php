@@ -1,5 +1,5 @@
 <?php if (empty($_SESSION['username']) && empty($_SESSION['mdp'])) {
-  header('Location: /campuscoud.com/');
+  header('Location: /campuscoud.com');
   exit();
 }
 
@@ -105,11 +105,14 @@ include('activite.php');
            <li class="nav-item">
             <a class="nav-link" href="addUser" title="Affiche users ">Add_users</a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href="attributaire" title="Affiche Attributaires ">Attributaires</a>
+          <li class="nav-item">
+            <a class="nav-link" href="etudiant" title="Affiche users ">etu</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="suppleant" title="Affiche Suppleants ">Suppleants</a>
+            <a class="nav-link" href="attributaire" title="Affiche Attributaires ">Attribu</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="suppleant" title="Affiche Suppleants ">Suppl</a>
           </li>
            <li class="nav-item">
             <a class="nav-link" href="index" title="Affiche evolution ">Evolution</a>
@@ -269,7 +272,7 @@ if ($_SESSION['profil'] != 'user' ){ ?>
 		
 		
         <li class="nav-item">
-          <a class="nav-link" href="https://campuscoud.com/" title="Déconnexion"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
+          <a class="nav-link" href="/campuscoud.com" title="Déconnexion"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>
         </li>
 		
       </ul>

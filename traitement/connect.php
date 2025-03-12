@@ -53,7 +53,7 @@ if (!empty($_POST['username_user']) && !empty($_POST['password_user'])) {
             exit();
         } else if ($row['profil_user'] == 'dba') {
 		 $_SESSION['dba'] = $row['profil_user'];
-            header('Location: ../profils/dba/index');
+            header('Location: ../profils/dba/affUsers');
             exit();
         }
         else if ($row['profil_user'] == 'chef_campus') {
@@ -109,7 +109,7 @@ if (!empty($_POST['username_user']) && !empty($_POST['password_user'])) {
 alert('Nom dutilisateur et/ou mot de passe incorrect.')
 </script>
 <?php
-echo '<meta http-equiv="refresh" content="0;URL=../index">';
+echo '<meta http-equiv="refresh" content="0;URL=/">';
 	exit();
     }
 }
