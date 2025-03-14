@@ -11,6 +11,35 @@ if (isset($_GET["numCarte"])) {
     $etudiant = studentConnect($numCarte); // Doit retourner un tableau ou null
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Vérifier si toutes les données requises sont présentes
+    if (isset($_POST["num_etu"], $_POST["prenoms"], $_POST["nom"], $_POST["telephone"], $_POST["lieuNaissance"], 
+              $_POST["dateNaissance"], $_POST["etablissement"], $_POST["departement"], 
+              $_POST["niveauFormation"], $_POST["moyenne"], $_POST["numIdentite"], $_POST["sexe"])) {
+
+        // Récupération des données
+        $num_etu = $_POST["num_etu"];
+        $prenoms = $_POST["prenoms"];
+        $nom = $_POST["nom"];
+        $telephone = $_POST["telephone"];
+        $lieuNaissance = $_POST["lieuNaissance"];
+        $dateNaissance = $_POST["dateNaissance"];
+        $etablissement = $_POST["etablissement"];
+        $departement = $_POST["departement"];
+        $niveauFormation = $_POST["niveauFormation"];
+        $moyenne = $_POST["moyenne"];
+        $numIdentite = $_POST["numIdentite"];
+        $sexe = $_POST["sexe"];
+
+        // Enregistrement de l'étudiant
+        enregistrerEtudiant($connexion, $num_etu, $prenoms, $nom, $telephone, $lieuNaissance, $dateNaissance, 
+                            $etablissement, $departement, $niveauFormation, $moyenne, $numIdentite, $sexe);
+    } else {
+        echo "Tous les champs du formulaire doivent être remplis.";
+    }
+}
+
+
  ?>
 
 

@@ -3969,4 +3969,35 @@ function getAllNiveauFormation2($faculte)
     return $resultatRequeteEtablissement;
 }
 
+// POUR enregistrer un etudiant 
+
+function enregistrerEtudiant($connexion, $num_etu, $prenoms, $nom, $telephone, $lieuNaissance, $dateNaissance, $etablissement, $departement, $niveauFormation, $moyenne, $numIdentite, $sexe) {
+    // Sécurisation des entrées
+    $num_etu = mysqli_real_escape_string($connexion, $num_etu);
+    $prenoms = mysqli_real_escape_string($connexion, $prenoms);
+    $nom = mysqli_real_escape_string($connexion, $nom);
+    $telephone = mysqli_real_escape_string($connexion, $telephone);
+    $lieuNaissance = mysqli_real_escape_string($connexion, $lieuNaissance);
+    $dateNaissance = mysqli_real_escape_string($connexion, $dateNaissance);
+    $etablissement = mysqli_real_escape_string($connexion, $etablissement);
+    $departement = mysqli_real_escape_string($connexion, $departement);
+    $niveauFormation = mysqli_real_escape_string($connexion, $niveauFormation);
+    $moyenne = mysqli_real_escape_string($connexion, $moyenne);
+    $numIdentite = mysqli_real_escape_string($connexion, $numIdentite);
+    $sexe = mysqli_real_escape_string($connexion, $sexe);
+
+    // Requête SQL d'insertion
+    $sql = "INSERT INTO codif_etudiant (num_etu, prenoms, nom, telephone, lieuNaissance, dateNaissance, etablissement, departement, niveauFormation, moyenne, numIdentite, sexe) 
+            VALUES ('$num_etu', '$prenoms', '$nom', '$telephone', '$lieuNaissance', '$dateNaissance', '$etablissement', '$departement', '$niveauFormation', '$moyenne', '$numIdentite', '$sexe')";
+
+    // Exécution de la requête
+    if (mysqli_query($connexion, $sql)) {
+        echo "<script>alert('Étudiant enregistré avec succès !'); window.location.href='etudiant.php';</script>";
+    } else {
+        echo "<script>alert('Erreur lors de l\'enregistrement : " . mysqli_error($connexion) . "');</script>";
+    }
+}
+
+
+
 ?>
